@@ -1,19 +1,20 @@
 {
-  "name": "generator-rskaggs-codemash-2020-lib",
-  "version": "0.0.0",
+  "name": "generator-rskaggs-component-library-starter",
+  "version": "0.0.3--test",
   "description": "A generator to get the base component library for a CodeMash 2020 workshop.",
   "homepage": "",
   "author": {
-    "name": "Russell Skaggs",
-    "email": "contact@russellskaggs.com",
-    "url": ""
+    "name": "Russell Skaggs"
   },
   "files": [
     "generators"
   ],
   "main": "generators/index.js",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "react",
+    "storybook",
+    "rollup"
   ],
   "devDependencies": {
     "yeoman-test": "^1.7.0",
@@ -31,8 +32,8 @@
     "npm": ">= 4.0.0"
   },
   "dependencies": {
-    "yeoman-generator": "^2.0.1",
     "chalk": "^2.1.0",
+    "yeoman-generator": "^2.0.1",
     "yosay": "^2.0.1"
   },
   "jest": {
@@ -63,7 +64,7 @@
       "node": true
     },
     "rules": {
-      "prettier/prettier": "error"
+      "prettier/prettier": "warn"
     },
     "plugins": [
       "prettier"
@@ -73,6 +74,6 @@
     "pretest": "eslint .",
     "test": "jest"
   },
-  "repository": "rskaggs/generator-rskaggs-codemash-2020-lib",
+  "repository": "git+https://github.com/rskaggs/generator-rskaggs-codemash-2020-lib",
   "license": "MIT"
 }

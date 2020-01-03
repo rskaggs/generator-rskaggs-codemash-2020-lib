@@ -7,10 +7,22 @@ module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
     this.log(
-      yosay(`Welcome to ${chalk.red('CodeMash 2020')}! Or at least using a generator made for it!`)
+      yosay(`Welcome! This generator will help you create a starter component-library using react, storybook and rollup.`)
     );
 
     const prompts = [
+      {
+        type: 'input',
+        name: 'registryUserName',
+        message: 'What is your npm registry username?',
+        default: ``
+      },
+      {
+        type: 'input',
+        name: 'registryPackageName',
+        message: 'What is your library Package Name?',
+        default: this.appname.replace(/\s+/g, '-').toLowerCase()
+      },
       {
         type: 'input',
         name: 'authorName',
@@ -35,6 +47,8 @@ module.exports = class extends Generator {
       "@babel/core": "^7.7.7",
       "@babel/preset-env": "^7.7.7",
       "@babel/preset-react": "^7.7.4",
+      "@rollup/plugin-commonjs": "^11.0.0",
+      "@rollup/plugin-node-resolve": "^6.0.0",
       "@storybook/addon-a11y": "^5.2.8",
       "@storybook/addon-docs": "^5.2.8",
       "@storybook/addon-knobs": "^5.2.8",
@@ -44,8 +58,6 @@ module.exports = class extends Generator {
       "react-dom": "^16.12.0",
       "rollup": "^1.27.14",
       "rollup-plugin-babel": "^4.3.3",
-      "rollup-plugin-commonjs": "^10.1.0",
-      "rollup-plugin-node-resolve": "^5.2.0",
       "styled-components": "^4.4.1"
     }
     
@@ -55,7 +67,7 @@ module.exports = class extends Generator {
     }
     
     const packageFile = {
-        "name": "codemash-2020-component-library",
+        "name": `@${this.props.registryUserName}/${this.props.registryPackageName}`,
         "version": "0.0.1",
         "description": "A Component Library built in a Workshop at CodeMash.",
         "main": "dist/bundle.js",
