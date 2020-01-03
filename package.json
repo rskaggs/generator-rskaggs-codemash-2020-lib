@@ -1,7 +1,7 @@
 {
   "name": "generator-rskaggs-component-library-starter",
-  "version": "0.0.3",
-  "description": "A generator to get the base component library for a CodeMash 2020 workshop.",
+  "version": "0.0.4",
+  "description": "A Component Libary Starter for Conferences and Demos",
   "homepage": "",
   "author": {
     "name": "Russell Skaggs"

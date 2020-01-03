@@ -25,6 +25,12 @@ module.exports = class extends Generator {
       },
       {
         type: 'input',
+        name: 'registryPackageDesc',
+        message: 'Package Description?',
+        default: `My awesome component library!`
+      },
+      {
+        type: 'input',
         name: 'authorName',
         message: 'What is your name?',
         default: ``
@@ -69,7 +75,7 @@ module.exports = class extends Generator {
     const packageFile = {
         "name": `@${this.props.registryUserName}/${this.props.registryPackageName}`,
         "version": "0.0.1",
-        "description": "A Component Library built in a Workshop at CodeMash.",
+        "description": this.props.registryPackageDesc,
         "main": "dist/bundle.js",
         "scripts": {
           "start": "start-storybook -p 9001",
