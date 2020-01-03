@@ -1,6 +1,6 @@
 {
   "name": "generator-rskaggs-component-library-starter",
-  "version": "0.0.3--test",
+  "version": "0.0.3",
   "description": "A generator to get the base component library for a CodeMash 2020 workshop.",
   "homepage": "",
   "author": {

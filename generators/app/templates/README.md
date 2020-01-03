@@ -1,9 +1,19 @@
-# Component Mash 2020!
+# Component Library Starter
 
-This repo was set up to create a boilerplate for a CodeMash 2020 Workshop. 
-
-Most of this was setup following the directions found on [Storybook's Manual Setup documentation page](https://storybook.js.org/docs/guides/guide-react/#manual-setup)
+This Component Library Starter was created for the purposes of educational workshops and demos.
 
 ## Style Approach
 
-We will be leveraging 
+This starter assumes the use of [styled-components](https://www.npmjs.com/package/styled-components) for styling the JSX Components.
+
+## Storybook
+
+This starter uses [@storybook/react](https://www.npmjs.com/package/@storybook/react) to develop components in issolation with the following plugins:
+
+- [@storybook/addon-knobs](https://www.npmjs.com/package/@storybook/addon-knobs)
+- [@storybook/addon-a11y](https://www.npmjs.com/package/@storybook/addon-a11y)
+- [@storybook/addon-docs](https://www.npmjs.com/package/@storybook/addon-docs)
+
+## Exporting
+
+This starter uses [rollup](https://www.npmjs.com/package/rollup) to package and export the components.
